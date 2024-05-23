@@ -254,7 +254,7 @@ var LibraryExceptions = {
     // Due to inheritance, those types may not precisely match the
     // type of the thrown object. Find one which matches, and
     // return the type of the catch block which should be called.
-    for (var arg in args) {
+    for (var caughtType of args) {
       var caughtType = args[arg];
 
       if (caughtType === 0 || caughtType === thrownType) {
